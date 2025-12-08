@@ -176,6 +176,7 @@ class Screenshot extends Model
 
 ```
 Step 9: Controller — ScreenshotController
+
 1️⃣ Create Controller
 ```
 
@@ -484,20 +485,25 @@ Navigate to /screenshots/create.
 
 ```
 Enter a valid website URL (e.g., https://www.google.com) in the form.
-```
+
 Click Take Screenshot.
 
 Screenshot will be saved in storage/app/public/screenshots and listed on the index page.
 
 Database record created.
 
+```
+
 View & Soft Delete
+
 Go to /screenshots.
+```
 
 Click X to mark screenshot as deleted (status = deleted).
 
 Record is soft-deleted (deleted_at set) and no longer visible.
 
+```
 ✅ Project Ready!
 
 Your Laravel 12 Browser Screenshot project is now fully set up and running. 🎉
