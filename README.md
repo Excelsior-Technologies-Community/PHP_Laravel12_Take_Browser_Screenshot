@@ -1,4 +1,4 @@
-# Laravel 12 Browser Screenshot
+# PHP_Laravel12_Take_Browser_Screenshot
 
 ## 1. Introduction
 
@@ -19,8 +19,8 @@ This project allows users to take screenshots of websites directly from a browse
 
 ### Step 1: Create Laravel 12 Project
 ```bash
-composer create-project laravel/laravel laravel12-screen-shot "12.*"
-cd laravel12-screen-shot
+composer create-project laravel/laravel PHP_Laravel12_Take_Browser_Screenshot "12.*"
+cd PHP_Laravel12_Take_Browser_Screenshot
 
 ```
 Step 2: Setup Environment
@@ -448,7 +448,7 @@ Step 11: Blade Views
 Step 12: Project Folder Structure
 ```
 
-laravel12-screen-shot/
+PHP_Laravel12_Take_Browser_Screenshot/
 │
 ├── app/
 │   ├── Http/Controllers/ScreenshotController.php
@@ -506,4 +506,4 @@ Record is soft-deleted (deleted_at set) and no longer visible.
 ```
 ✅ Project Ready!
 
-Your Laravel 12 Browser Screenshot project is now fully set up and running. 🎉
+Your PHP_Laravel12_Take_Browser_Screenshot project is now fully set up and running. 🎉
