@@ -4,7 +4,7 @@
 
 This project allows users to take screenshots of websites directly from a browser URL and store them in the Laravel application.
 
-✅ **Key Features:**
+**Key Features:**
 
 - Take a screenshot of any valid URL.
 - Store screenshots in storage and save the path in the database.
@@ -68,7 +68,7 @@ DB_DATABASE=browser_screen_shot
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-✅ Make sure after setup .env, run:
+Make sure after setup .env, run:
 ```
 php artisan migrate
 ```
@@ -76,7 +76,7 @@ This will automatically create the browser_screen_shot database in MySQL.
 
 Step 7: Database Migration
 
-1️⃣ Create Migration File
+1️) Create Migration File
 ```
 
 php artisan make:migration create_screenshots_table
@@ -86,7 +86,7 @@ Migration file will be generated in:
 
 laravel12-screen-shot/database/migrations/
 
-2️⃣ Migration File Content
+2️) Migration File Content
 
 ```
 <?php
@@ -136,14 +136,14 @@ php artisan migrate
 ```
 Step 8: Model — Screenshot
 
-1️⃣ Create Model
+1️) Create Model
 ```
 php artisan make:model Screenshot
 ```
 
 File location: laravel12-screen-shot/app/Models/Screenshot.php
 
-2️⃣ Model File with Comments
+2️) Model File with Comments
 ```
 <?php
 
@@ -177,15 +177,15 @@ class Screenshot extends Model
 ```
 Step 9: Controller — ScreenshotController
 
-1️⃣ Create Controller
-```
+1️) Create Controller
 
+```
 php artisan make:controller ScreenshotController
-
 ```
+
 File location: laravel12-screen-shot/app/Http/Controllers/ScreenshotController.php
 
-2️⃣ Controller File with Comments
+2️) Controller File with Comments
 ```
 
 <?php
@@ -328,7 +328,7 @@ Route::get('/', function () {
 ```
 Step 11: Blade Views
 
-1️⃣ create.blade.php
+1️) create.blade.php
 
 ```
 <!DOCTYPE html>
@@ -385,7 +385,7 @@ Step 11: Blade Views
 
 
 ```
-2️⃣ index.blade.php
+2️) index.blade.php
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -504,6 +504,30 @@ Click X to mark screenshot as deleted (status = deleted).
 Record is soft-deleted (deleted_at set) and no longer visible.
 
 ```
-✅ Project Ready!
+---
+# Output:
 
-Your PHP_Laravel12_Take_Browser_Screenshot project is now fully set up and running. 🎉
+---
+Take Website Screenshot:
+---
+```
+http://127.0.0.1:8000/screenshots/create
+```
+
+<img width="1919" height="1087" alt="Screenshot 2025-12-08 123747" src="https://github.com/user-attachments/assets/a68e26f7-57c4-4741-a2c1-9826e4a43b79" />
+
+<img width="1919" height="1034" alt="Screenshot 2025-12-08 123808" src="https://github.com/user-attachments/assets/6c0557f1-1d22-47ee-808a-d94148ef159d" />
+
+---
+View Screenshots:
+---
+```
+http://127.0.0.1:8000/screenshots
+```
+
+<img width="1919" height="1030" alt="Screenshot 2025-12-08 123819" src="https://github.com/user-attachments/assets/a4bbe3bd-ef02-47e1-9000-ffdf6284b538" />
+
+---
+Project Ready!
+
+Your PHP_Laravel12_Take_Browser_Screenshot project is now fully set up and running. 
