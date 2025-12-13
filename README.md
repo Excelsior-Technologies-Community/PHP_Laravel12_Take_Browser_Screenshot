@@ -469,6 +469,7 @@ PHP_Laravel12_Take_Browser_Screenshot/
 
 ```
 Step 13: Running the Project
+
 Start Laravel server:
 ```
 
