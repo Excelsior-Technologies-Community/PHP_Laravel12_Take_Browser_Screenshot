@@ -53,7 +53,8 @@ class ScreenshotController extends Controller
         // Save screenshot details to database
         Screenshot::create([
             'url' => $request->url,
-            'image_path' => 'screenshots/' . $fileName
+            'image_path' => 'screenshots/' . $fileName,
+            'status' => 'active'
         ]);
 
         // Redirect back to form with a success message
@@ -78,5 +79,20 @@ class ScreenshotController extends Controller
         // Redirect to index page with success message
         return redirect()->route('screenshots.index')
             ->with('success', 'Screenshot deleted successfully!');
+    }
+
+    /**
+     * Download a screenshot and increment the download count.
+     */
+    public function download($id)
+    {
+        // Find screenshot by ID
+        $screenshot = Screenshot::findOrFail($id);
+
+        // Increment download count
+        $screenshot->increment('download_count');
+
+        // Serve the file for download
+        return response()->download(public_path('storage/' . $screenshot->image_path));
     }
 }
