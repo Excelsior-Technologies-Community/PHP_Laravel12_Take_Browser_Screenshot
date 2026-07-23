@@ -234,4 +234,4 @@ class ScreenshotController extends Controller
         // Serve the file for download
         return response()->download(public_path('storage/' . $screenshot->image_path));
     }
-}
+} 
