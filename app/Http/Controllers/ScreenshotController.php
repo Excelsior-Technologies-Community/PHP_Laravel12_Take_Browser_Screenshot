@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Screenshot;               // Import Screenshot model for database operations
-use Illuminate\Http\Request;             // Import Request class to handle form submissions
-use Spatie\Browsershot\Browsershot;     // Import Browsershot package to take browser screenshots
-use Illuminate\Support\Str;             // Import Str helper to generate random strings
+use App\Models\Screenshot;              
+use Illuminate\Http\Request;            
+use Spatie\Browsershot\Browsershot;    
+use Illuminate\Support\Str;            
 
 class ScreenshotController extends Controller
 {
