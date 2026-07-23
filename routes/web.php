@@ -27,6 +27,9 @@ Route::delete('/screenshots/{id}', [ScreenshotController::class, 'destroy'])->na
 // **New Route: Download screenshot and increment download count**
 Route::get('/screenshots/download/{id}', [ScreenshotController::class, 'download'])->name('screenshots.download');
 
+// **New Route: Generate PDF report**
+Route::get('/screenshots/pdf', [ScreenshotController::class, 'generatePdf'])->name('screenshots.pdf');
+
 // Default home route
 Route::get('/', function () {
     return view('welcome');

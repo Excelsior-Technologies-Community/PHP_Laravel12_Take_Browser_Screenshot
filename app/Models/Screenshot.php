@@ -16,6 +16,12 @@ class Screenshot extends Model
         'status',
         'created_by',
         'updated_by',
-        'download_count'
+        'download_count',
+        'viewport',
+        'format',
+        'quality',
+        'is_full_page',
+        'width',
+        'height'
     ];
 }
